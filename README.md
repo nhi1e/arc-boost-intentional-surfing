@@ -1,4 +1,4 @@
-# intentional surfing
+# Intentional Surfing
 
 Fully inspired by [Mindful Media Boost](https://github.com/qu8n/arc-boost-mindful-media#mindful-media-boost) by **[quanvs](https://github.com/quanvs/arc-boost-mindful-media)**
 
