@@ -1,0 +1,169 @@
+/* This is injected after a web page loads */
+
+/* VARIABLES */
+/* Tweak the following to fit your preferences */
+
+:root {
+    --font-family: "Arial", sans-serif;
+    --padding-bottom: 20px;
+    --opacity: 0.9;
+    --font-weight: bold;
+  }
+  
+  
+  #overlayElement {
+    position: fixed; /* Sit on top of the page content */
+    display: block;
+    width: 100%; /* To cover the whole page */
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background-color:var(
+      --arc-palette-background
+    ); /*#b4aba8;*/
+    text-align: center;
+  }
+  
+  
+  .paddingHelper {
+    padding-top: 200px;
+  }
+  
+  .mainMessage {
+    font-size: xxx-large; /*90px*/
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+    opacity: var(--opacity);
+    padding-bottom: 10%;
+    color: var(--arc-palette-maxContrastColor);	/*#a7a7a7;*/
+  }
+  
+  .intentionMessage {
+    font-size: x-large; /*20px*/
+    font-weight: light;
+    font-family: var(--font-family);
+    opacity: var(--opacity);
+    color:var(--arc-palette-foregroundSecondary); /* #c2ceb8;*/
+    margin-bottom: 0.5px;
+  }
+  
+  #countdownMessage {
+    font-family: var(--font-family);
+    font-size: large; /*30px*/
+    opacity: 0.3;
+    font-weight: light;
+    padding-bottom: var(--padding-bottom);
+    color: var(--arc-palette-title);
+  }
+  
+  #closeButton,
+  #continueButton {
+    opacity: var(--opacity);
+    font-family: var(--font-family);
+    padding: 0.75rem 3rem;
+    border: 0;
+    border-radius: 0.3rem;
+    font-weight: light;
+    line-height: 1.5;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  #closeButton:hover,
+  #continueButton:hover {
+    opacity: calc(var(--opacity) - 0.1);
+  }
+  
+  #closeButton {
+    background-color:  var(--arc-palette-foregroundSecondary);/*#c5c5b4;*/
+    color:var(--arc-palette-title);/* #b4aba8;*/
+    font-size: x-large;
+    border-radius: 25px;
+    /*z-index: 1;*/
+  }
+  
+  #continueButton {
+    background-color: transparent;
+    color:var(--arc-palette-title);/* #b4aba8;*/
+    font-size: large;
+    border-radius: 15px;
+  }
+  
+  /* Adjust the positioning of the text container */
+  .textContainer {
+    display: block;
+    /*flex-direction: column;*/
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 50%; /* Adjust as needed, e.g., 50% of window height */
+    width: 80%; /* Adjust as needed, e.g., 80% of window width */
+    top: 25%; /* Adjust as needed to center vertically */
+    left: 10%; /* Adjust as needed to center horizontally */
+    /*transform: translate(-50%, -50%);
+    max-width: 10%;  400px Set a maximum width if desired */
+    padding-bottom: var(--padding-bottom);
+  }
+  
+  
+  #textAreaInput {
+    position: relative;
+    text-align: center;
+    z-index: 999999;/* /* Ensure it's on top of other elements */
+    width: 20%; /* Adjust the width as needed */
+    height: 2%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    resize: none;
+    background-color: rgba(255, 255, 255, 0.0); /* Transparent white background */
+    color: var(--arc-palette-foregroundSecondary);/* #c2ceb8;*/
+  }
+  
+  
+  .breathingContainer {
+    position: fixed; /* sit on top of the page content */
+    display: flex;
+    width: 100%; /* to cover the whole page */
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: var(--arc-palette-background); /*rgba(0, 0, 0, .75);*/
+  }
+  
+  .breathingContainer .circle {
+      width: 100px;
+      height: 100px;
+      background-color:  rgba(0, 0, 0, .75);
+      border-radius: 50%;
+      animation-name: pulse;
+      animation-duration: 3.6s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-fill-mode: reverse;
+      animation-play-state: running;
+  }
+  
+  @keyframes pulse {
+      0% {
+          transform: scale(0);
+          background: var(--arc-palette-focus);/* #a7a7a7;*/
+      }
+      100% {
+          transform: scale(23);
+          background: var(--arc-palette-hover);/*  #abb3b6;*/
+      }
+  }
+  
+  
