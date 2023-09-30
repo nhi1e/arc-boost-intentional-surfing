@@ -13,5 +13,4 @@ This a Boost for the [Arc browser](https://arc.net/) modified the original ri
 - Youtube
 - Pinterest
 - Netflix
-- Amazon
 - eBay
